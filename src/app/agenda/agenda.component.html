@@ -1,0 +1,86 @@
+
+     
+      
+<ion-header translucent class="loginheader othheader">
+  <ion-toolbar>
+  <ion-buttons slot="start">    
+    <ion-back-button></ion-back-button>
+    <ion-title class="title">Agenda</ion-title>
+  </ion-buttons>
+</ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+<div class="agendamainwrapper">
+  <div class="agendadatebar">
+    <!-- <button class="datebtn dateactive">27 Sun</button> --> 
+    <button class="datebtn" (click)="clickButton(item);" *ngFor="let item of items" [ngClass]="{'dateactive': viewDivFlug === item}">{{item}}</button>    
+  </div>
+  <div class="agendacontainer">
+    <div class="agendalistwrapper">
+      <div class="agendalist">
+        <div class="clock">
+          <ion-icon name="time"></ion-icon>
+        </div>
+          <div class="textwrapper">
+            <p><i>10:00am - 10:10am (10m)</i></p>
+            <h3>Contrary to popular belief, Lorem Ipsum is not simply random text.  <span class="starposition"><ion-icon name="star-outline"></ion-icon></span></h3>
+              <p><span><img src="../../assets/images/locationicon.png"></span> 
+                If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything 
+                embarrassing hidden in the middle of text.</p>
+                <p><span><img src="../../assets/images/usericon.png"></span>
+                  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia
+                </p>
+                <button class="bluesmbutton">Spotlight Asia</button>
+                <button class="graysmbutton">Chair’s Remarks</button>
+                <button class="greenbutton">Videos</button>
+                <button class="redbutton">images</button>
+            <h3>Contrary to popular belief, Lorem Ipsum is not simply random text. <span class="starposition"><ion-icon name="star-outline"></ion-icon></span></h3>
+              <p><span><img src="../../assets/images/locationicon.png"></span> 
+                If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything 
+                embarrassing hidden in the middle of text.</p>
+                <p><span><img src="../../assets/images/usericon.png"></span>
+                  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia
+                </p>
+                <button class="bluesmbutton">Spotlight Asia</button>
+                <button class="graysmbutton">Chair’s Remarks</button>
+                <button class="greenbutton">Videos</button>
+                <button class="redbutton">images</button>
+          </div>
+      </div>
+      <div class="agendalist">
+        <div class="clock">
+          <ion-icon name="time"></ion-icon>
+        </div>
+          <div class="textwrapper">
+            <p><i>10:00am - 10:10am (10m)</i></p>
+            <h3>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of 
+              classical Latin literature from 45 BC, making it over 2000 years old. <span class="starposition"><ion-icon name="star-outline"></ion-icon></span></h3>
+              <p><span><img src="../../assets/images/locationicon.png"></span> 
+                If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything 
+                embarrassing hidden in the middle of text.</p>
+                <p><span><img src="../../assets/images/usericon.png"></span>
+                  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia
+                </p>
+                <button class="bluesmbutton">Spotlight Asia</button>
+                <button class="graysmbutton">Chair’s Remarks</button>
+                <button class="greenbutton">Videos</button>
+                <button class="redbutton">images</button>
+            <h3>Contrary to popular belief, Lorem Ipsum is not simply random text. <span class="starposition"><ion-icon name="star-outline"></ion-icon></span></h3>
+              <p><span><img src="../../assets/images/locationicon.png"></span> 
+                If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything 
+                embarrassing hidden in the middle of text.</p>
+                <p><span><img src="../../assets/images/usericon.png"></span>
+                  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia
+                </p>
+                <button class="bluesmbutton">Spotlight Asia</button>
+                <button class="graysmbutton">Chair’s Remarks</button>
+                <button class="greenbutton">Videos</button>
+                <button class="redbutton">images</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+</ion-content>
+<app-tabs></app-tabs>

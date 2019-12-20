@@ -1,0 +1,9 @@
+ion-toolbar {
+    --color: #ffffff;
+    --background: none;
+}
+ion-toolbar{position: absolute; left: 0; top: 0;}
+.header-md:after{display: none;}
+.button-text.sc-ion-back-button-ios{display: none;}
+
+span.button-inner.sc-ion-back-button-ios{--color: #ffffff;}
