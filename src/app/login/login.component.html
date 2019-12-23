@@ -18,18 +18,18 @@
           <img src="../../assets/images/logo1.png">
         </div>
         <div class="textwrapper">
-          <form class="loginform">
+          <form class="loginform" #form="ngForm" (ngSubmit)="register(form)">
             <div class="form-group">
-              <input ion-input placeholder="Username" type="text">
+              <ion-input ion-input placeholder="Username" type="text" name="username" formControlName="username"></ion-input>
             </div>
             <div class="form-group">
-              <input ion-input placeholder="Password" type="password">
+              <ion-input ion-input placeholder="Password" type="password" name="password" formControlName="password"></ion-input>
             </div>
-            
-            
-          </form>
-          <button class="welcomebluebutton" routerLink="/homepage">login</button>
+            <br>
+            <button class="welcomebluebutton" routerLink="/homepage">login</button>
           <p><span><a routerLink="/otp">forgot password?</a></span></p>
+          </form>
+          
         </div>
   </div>
 </div>

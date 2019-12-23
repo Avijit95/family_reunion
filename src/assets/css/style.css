@@ -134,7 +134,7 @@
 .textwrapper p span, .textwrapper p span a{font-size: 24px;}
 
 .textwrapper p span a{margin-left: 20px;}
-.loginform input{
+.loginform ion-input{
     background-color: #fff;
     padding: 3%;
     text-align: left;
