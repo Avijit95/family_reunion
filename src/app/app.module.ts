@@ -5,7 +5,8 @@ import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-
+import { FormsModule, ReactiveFormsModule  }   from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
@@ -18,16 +19,18 @@ import { TabsComponent } from './tabs/tabs.component';
 import { AgendaComponent } from './agenda/agenda.component';
 import { AgendaviewComponent } from './agendaview/agendaview.component';
 import { SpeakerComponent } from './speaker/speaker.component';
-import { SpeakerviewComponent } from './speakerview/speakerview.component';
+import { SpeakerviewComponent } from './speakerview/speakerview.component'
 import { SponsorComponent } from './sponsor/sponsor.component';
 import { SponsorviewComponent } from './sponsorview/sponsorview.component';
 import { MyprofileComponent } from './myprofile/myprofile.component';
 import { EditmyprofileComponent } from './editmyprofile/editmyprofile.component';
 import { ProductsComponent } from './products/products.component';
 import { SelectcategoryComponent } from './selectcategory/selectcategory.component';
-
+import{ApiService} from './services/api-service';
+import { from } from 'rxjs';
+import { CookieService } from 'ngx-cookie-service';
 @NgModule({
-  declarations: [
+  declarations: [    
     AppComponent,
     WelcomeComponent,
     LoginComponent,
@@ -48,9 +51,18 @@ import { SelectcategoryComponent } from './selectcategory/selectcategory.compone
     SelectcategoryComponent
   ],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [
+    BrowserModule, 
+    IonicModule.forRoot(), 
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
   providers: [
     StatusBar,
+    CookieService,
+    ApiService,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

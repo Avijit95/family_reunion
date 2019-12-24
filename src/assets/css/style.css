@@ -134,16 +134,17 @@
 .textwrapper p span, .textwrapper p span a{font-size: 24px;}
 
 .textwrapper p span a{margin-left: 20px;}
-.loginform ion-input{
+.loginform ion-input, .loginform input{
     background-color: #fff;
-    padding: 3%;
+    padding-right: 10% !important;
     text-align: left;
     border: 0;
-    width: 97%;
+    width: 100%;
 }
 .loginform input:focus{outline: none;}
 .form-group{
     padding: 5px 0;
+    position: relative;
 }
 
 .loginform {
@@ -616,3 +617,29 @@ margin-top: 0;
     justify-content: space-between;
     flex-direction: column;
 }
+
+
+.errortext {
+    color: #ffffff !important;
+    text-align: left;
+    height: 27px;
+    width: 27px;
+    position: absolute;
+    top: 12px;
+    right: 6px;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.validinput{
+    border: 1px solid #0b830c;
+    color: #0b830c !important;
+}
+.invalidinput{    
+    border:1px solid #f04343;
+    color: red !important;
+}
+.errormsg{color: #fcff00 !important;}

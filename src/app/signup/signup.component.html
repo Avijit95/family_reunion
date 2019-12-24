@@ -18,26 +18,38 @@
         <img src="../../assets/images/logo1.png">
       </div>
       <div class="textwrapper">
-        <form class="loginform">
+        <form class="loginform" [formGroup]="signupForm">
           <div class="form-group">
-            <input ion-input placeholder="Email Address" type="text">
+            <ion-input placeholder="Email Address" type="text" formControlName="email" (blur)="inputUntouch('email')"></ion-input>
+            <p *ngIf="signupForm.controls['email'].touched && !signupForm.controls['email'].invalid" class="errortext validinput"> <ion-icon name="checkmark"></ion-icon></p>
+            <p *ngIf="signupForm.controls['email'].touched && !signupForm.controls['email'].valid" class="errortext invalidinput"><ion-icon name="close"></ion-icon></p>
           </div>
           <div class="form-group">
-            <input ion-input placeholder="Phone No" type="text">
+            <ion-input placeholder="Phone No" type="text" formControlName="phoneno" (blur)="inputUntouch('phoneno')"></ion-input>
+            <p *ngIf="signupForm.controls['phoneno'].touched && !signupForm.controls['phoneno'].invalid" class="errortext validinput"> <ion-icon name="checkmark"></ion-icon></p>
+            <p *ngIf="signupForm.controls['phoneno'].touched && !signupForm.controls['phoneno'].valid" class="errortext invalidinput"><ion-icon name="close"></ion-icon></p>
           </div>
           <div class="form-group">
-            <input ion-input placeholder="User Name" type="text">
+            <ion-input placeholder="User Name" type="text" formControlName="username" (blur)="inputUntouch('username')"></ion-input>
+            <p *ngIf="signupForm.controls['username'].touched && !signupForm.controls['username'].invalid" class="errortext validinput"> <ion-icon name="checkmark"></ion-icon></p>
+            <p *ngIf="signupForm.controls['username'].touched && !signupForm.controls['username'].valid" class="errortext invalidinput"><ion-icon name="close"></ion-icon></p>
           </div>
           <div class="form-group">
-            <input ion-input placeholder="Password" type="password">
+            <ion-input placeholder="Password" type="password" formControlName="password" (blur)="inputUntouch('password')"></ion-input>
+            <p *ngIf="signupForm.controls['password'].touched && !signupForm.controls['password'].invalid" class="errortext validinput"><ion-icon name="checkmark"></ion-icon></p>
+            <p *ngIf="signupForm.controls['password'].touched && !signupForm.controls['password'].valid" class="errortext invalidinput"><ion-icon name="close"></ion-icon></p>
           </div>
           <div class="form-group">
-            <input ion-input placeholder="Confirm Password" type="password">
+            <ion-input placeholder="Confirm Password" type="password" formControlName="confirmpassword" (blur)="inputUntouch('confirmpassword')"></ion-input>
+            <p *ngIf="signupForm.controls['confirmpassword'].touched && !signupForm.controls['confirmpassword'].invalid" class="errortext validinput"><ion-icon name="checkmark"></ion-icon></p>
+            <p *ngIf="signupForm.controls['confirmpassword'].touched && !signupForm.controls['confirmpassword'].valid" class="errortext invalidinput"><ion-icon name="close"></ion-icon>
+            </p>
+           
           </div>
           
           
         </form>
-        <button class="welcomebluebutton">Signup</button>
+        <button class="welcomebluebutton" (click)="signup()">Signup</button>
         <p><span><a routerLink="/login">Login</a></span></p>
       </div>
 </div>
