@@ -29,6 +29,7 @@ import { SelectcategoryComponent } from './selectcategory/selectcategory.compone
 import{ApiService} from './services/api-service';
 import { from } from 'rxjs';
 import { CookieService } from 'ngx-cookie-service';
+import { TalenthuntComponent } from './talenthunt/talenthunt.component';
 @NgModule({
   declarations: [    
     AppComponent,
@@ -48,7 +49,8 @@ import { CookieService } from 'ngx-cookie-service';
     MyprofileComponent,
     EditmyprofileComponent,
     ProductsComponent,
-    SelectcategoryComponent
+    SelectcategoryComponent,
+    TalenthuntComponent
   ],
   entryComponents: [],
   imports: [

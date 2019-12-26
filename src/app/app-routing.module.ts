@@ -17,6 +17,7 @@ import { MyprofileComponent } from './myprofile/myprofile.component';
 import { EditmyprofileComponent } from './editmyprofile/editmyprofile.component';
 import { ProductsComponent } from './products/products.component';
 import { SelectcategoryComponent } from './selectcategory/selectcategory.component';
+import { TalenthuntComponent } from './talenthunt/talenthunt.component';
 
 const routes: Routes = [
   { path: 'home', redirectTo: 'home', pathMatch: 'full' },
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'editmyprofile', component : EditmyprofileComponent},
   { path: 'products', component : ProductsComponent},
   { path: 'selectcategory', component : SelectcategoryComponent},
+  { path: 'talenthunt', component : TalenthuntComponent},
 ];
 
 @NgModule({

@@ -643,3 +643,92 @@ margin-top: 0;
     color: red !important;
 }
 .errormsg{color: #fcff00 !important;}
+.bgrowtitle{
+    font-family: 'RobotoBold';
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #2c2c2c;width: 100%;
+}
+.container-90 {
+    width: 90%;
+    margin: 0 auto;
+}
+.bgrow {
+    background: #eaeaea;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    margin: 10px 0;    display: flex;
+    flex-wrap: wrap;
+}
+.bgrow .bgrowinnerwrapper .col-1-7{width: 67%; background-color: #292929;}
+.bgrow .bgrowinnerwrapper .col-1-3{width: 30%; margin: 0; background: #fff;text-align: center;padding: 5px;}
+.bgrowinnerwrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;padding-top: 10px;
+}
+.likewrapper{
+    color: #fff;
+    background-color: #2892f8;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 13px 15px 1px #000;
+    border-radius: 5px;
+    padding: 9px 0px;
+    margin-top: 9px;
+}
+.bgrowinnerwrapper .textwrapper h3{
+    font-family: 'RobotoMedium';
+    font-size: 18px;    color: #292929;    text-transform: uppercase;
+}
+.bgrowinnerwrapper .textwrapper h3 span{display: block;}
+.bgrowinnerwrapper .textwrapper h2{
+    font-family: 'RobotoBold';
+    font-size: 18px;color: #292929;
+}
+.videowrapper video{width: 100%;}
+.videowrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.uploadvideorbutton {
+    background: #2792f8;
+    color: #fff;
+    opacity: 1;
+    font-size: 31px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px #979797!important;
+    position: fixed;
+    right: 9px;
+    top: 11px;
+    z-index: 99;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
