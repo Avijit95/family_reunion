@@ -46,7 +46,7 @@ export class SignupComponent implements OnInit {
     this.apiService.postData('addorupdatedata',postData).subscribe((res:any)=>{
       if(res.status){
           console.log("value inserted");
-          this.Router.navigateByUrl ('/homepage');        
+          this.Router.navigateByUrl ('/login');        
       }
       
     })

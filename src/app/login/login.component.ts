@@ -33,11 +33,13 @@ export class LoginComponent implements OnInit {
       }
       this.apiService.postData('login',postData).subscribe((response:any)=>{
         console.log(response);
+        this.Router.navigateByUrl ('/homepage');
       })
     }
   }
   
   inputUntouch(val: any) {
     this.loginForm.controls[val].markAsUntouched();
+    
   }
 }
