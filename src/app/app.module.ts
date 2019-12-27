@@ -30,6 +30,7 @@ import{ApiService} from './services/api-service';
 import { from } from 'rxjs';
 import { CookieService } from 'ngx-cookie-service';
 import { TalenthuntComponent } from './talenthunt/talenthunt.component';
+import { TalenthuntuploadComponent } from './talenthuntupload/talenthuntupload.component';
 @NgModule({
   declarations: [    
     AppComponent,
@@ -50,7 +51,8 @@ import { TalenthuntComponent } from './talenthunt/talenthunt.component';
     EditmyprofileComponent,
     ProductsComponent,
     SelectcategoryComponent,
-    TalenthuntComponent
+    TalenthuntComponent,
+    TalenthuntuploadComponent
   ],
   entryComponents: [],
   imports: [
