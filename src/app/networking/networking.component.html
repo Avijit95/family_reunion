@@ -1,0 +1,293 @@
+<ion-header translucent class="loginheader othheader">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-title class="title">Networking</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content fullscreen>
+  <div class="networkingmainwrapper">
+    <div class="Sponsormainwrapper">
+      <div class="tabbuttonwrapper">
+        <button (click)="clickButton('Attendees');" [ngClass]="{'dateactive': viewDivFlug==='Attendees'}">Attendees</button>
+        <button (click)="clickButton('Connections');" [ngClass]="{'dateactive': viewDivFlug==='Connections'}">Connections</button>
+      </div>
+  
+        <div class="sponsorcontainer" *ngIf="viewDivFlug == 'Attendees'">
+          <div class="searchbar">
+            <ion-searchbar></ion-searchbar>
+          </div>
+          <div class="speakerlistwrapper">
+            <div class="titlewrapper">
+              <h1>Recommended</h1>
+              <h4 >
+                <span>Based on your profile</span>
+                <span><a routerLink="/myprofile">Improve profile</a></span>
+              </h4>
+            </div>
+            <a class="speakerlis" routerLink="/sponsorview">
+              <div class="col-1-3">
+                <div class="imgwrapper">
+                  <img src="../../assets/images/speakerimg1.png">
+                </div>
+              </div>
+              <div class="col-1-7">
+                <div class="textwrapper">
+                  <h2>Aaron Goldsmid</h2>
+                  <h5>It is a long established fact that a reader will be distracted by</h5>
+                  <p>Contrary to popular belief,</p>
+                </div>
+              </div>
+              <div class="rightarrow">
+                <a>
+                <img src="../../assets/images/rightarrow.png">
+              </a>
+              </div>
+            </a>
+            <a class="speakerlis" routerLink="/sponsorview">
+              <div class="col-1-3">
+                <div class="imgwrapper">
+                  <img src="../../assets/images/speakerimg2.png">
+                </div>
+              </div>
+              <div class="col-1-7">
+                <div class="textwrapper">
+                  <h2>Aaron Goldsmid</h2>
+                  <h5>It is a long established fact that a reader will be distracted by</h5>
+                  <p>Contrary to popular belief,</p>
+                </div>
+              </div>
+              <div class="rightarrow">
+                <a>
+                <img src="../../assets/images/rightarrow.png">
+              </a>
+              </div>
+            </a>
+
+
+            <a class="speakerlis" routerLink="/sponsorview">
+              <div class="col-1-3">
+                <div class="imgwrapper">
+                  <img src="../../assets/images/speakerimg3.png">
+                </div>
+              </div>
+              <div class="col-1-7">
+                <div class="textwrapper">
+                  <h2>Aaron Goldsmid</h2>
+                  <h5>It is a long established fact that a reader will be distracted by</h5>
+                  <p>Contrary to popular belief,</p>
+                </div>
+              </div>
+              <div class="rightarrow">
+                <a>
+                <img src="../../assets/images/rightarrow.png">
+              </a>
+              </div>
+            </a>
+            <div class="titlewrapper">
+              <h1>Recentil Active</h1>
+            </div>            
+  
+            <a class="speakerlis" routerLink="/sponsorview">          
+              
+              <div class="col-1-3">
+                <div class="imgwrapper">
+                  <img src="../../assets/images/speakerimg1.png">
+                </div>
+              </div>
+              <div class="col-1-7">
+                <div class="textwrapper">
+                  <h2>Aaron Goldsmid</h2>
+                  <h5>It is a long established fact that a reader will be distracted by</h5>
+                  <p>Contrary to popular belief,</p>
+                </div>
+              </div>
+              <div class="rightarrow">
+                <a>
+                <img src="../../assets/images/rightarrow.png">
+              </a>
+              </div>
+            </a>
+            <a class="speakerlis" routerLink="/sponsorview">
+              <div class="col-1-3">
+                <div class="imgwrapper">
+                  <img src="../../assets/images/speakerimg2.png">
+                </div>
+              </div>
+              <div class="col-1-7">
+                <div class="textwrapper">
+                  <h2>Aaron Goldsmid</h2>
+                  <h5>It is a long established fact that a reader will be distracted by</h5>
+                  <p>Contrary to popular belief,</p>
+                </div>
+              </div>
+              <div class="rightarrow">
+                <a>
+                <img src="../../assets/images/rightarrow.png">
+              </a>
+              </div>
+            </a>
+            <a class="speakerlis" routerLink="/sponsorview">
+              <div class="col-1-3">
+                <div class="imgwrapper">
+                  <img src="../../assets/images/speakerimg3.png">
+                </div>
+              </div>
+              <div class="col-1-7">
+                <div class="textwrapper">
+                  <h2>Aaron Goldsmid</h2>
+                  <h5>It is a long established fact that a reader will be distracted by</h5>
+                  <p>Contrary to popular belief,</p>
+                </div>
+              </div>
+              <div class="rightarrow">
+                <a>
+                <img src="../../assets/images/rightarrow.png">
+              </a>
+              </div>
+            </a>
+  
+  
+          </div>
+        </div>
+      <div>
+        <div class="sponsorcontainer"  *ngIf="viewDivFlug == 'Connections'">
+          <!-- <div class="searchbar">
+            <ion-searchbar></ion-searchbar>
+          </div> -->
+          <div class="speakerlistwrapper">
+            <!-- <div class="titlewrapper">
+              <h1>Featured</h1>
+            </div> -->
+            <a class="speakerlis" routerLink="/speakerview">
+              <div class="col-1-3">
+                <div class="imgwrapper">
+                  <img src="../../assets/images/speakerimg3.png">
+                </div>
+              </div>
+              <div class="col-1-7">
+                <div class="textwrapper">
+                  <h2>Aaron Goldsmid</h2>
+                  <h5><ion-icon name="calendar"></ion-icon> Meeting Declined</h5>
+                  <p>Tue 29, 4:00pm - 4:30pm</p>
+                </div>
+              </div>
+              <div class="rightarrow">
+                <a>
+                12:14 pm
+              </a>
+              </div>
+            </a>
+            <a class="speakerlis" routerLink="/speakerview">          
+              
+              <div class="col-1-3">
+                <div class="imgwrapper">
+                  <img src="../../assets/images/speakerimg1.png">
+                </div>
+              </div>
+              <div class="col-1-7">
+                <div class="textwrapper">
+                  <h2>Aaron Goldsmid</h2>
+                  <h5><ion-icon name="chatboxes"></ion-icon> Message sent</h5>
+                  <p>Are you available to meet at 10am</p>
+                </div>
+              </div>
+              <div class="rightarrow">
+                <a>
+               Wed 30
+              </a>
+              </div>
+            </a>
+            <a class="speakerlis" routerLink="/speakerview">
+              <div class="col-1-3">
+                <div class="imgwrapper">
+                  <img src="../../assets/images/speakerimg2.png">
+                </div>
+              </div>
+              <div class="col-1-7">
+                <div class="textwrapper">
+                  <h2>Aaron Goldsmid</h2>
+                  <h5><ion-icon name="calendar"></ion-icon> Meeting Declined</h5>
+                  <p>Tue 29, 4:00pm - 4:30pm</p>
+                </div>
+              </div>
+              <div class="rightarrow">
+                <a>
+                12:14 pm
+              </a>
+              </div>
+            </a>
+            <a class="speakerlis" routerLink="/speakerview">          
+              
+              <div class="col-1-3">
+                <div class="imgwrapper">
+                  <img src="../../assets/images/speakerimg4.png">
+                </div>
+              </div>
+              <div class="col-1-7">
+                <div class="textwrapper">
+                  <h2>Aaron Goldsmid</h2>
+                  <h5><ion-icon name="chatboxes"></ion-icon> Message sent</h5>
+                  <p>Are you available to meet at 10am</p>
+                </div>
+              </div>
+              <div class="rightarrow">
+                <a>
+               Wed 30
+              </a>
+              </div>
+            </a>
+            <a class="speakerlis" routerLink="/speakerview">
+              <div class="col-1-3">
+                <div class="imgwrapper">
+                  <img src="../../assets/images/speakerimg1.png">
+                </div>
+              </div>
+              <div class="col-1-7">
+                <div class="textwrapper">
+                  <h2>Aaron Goldsmid</h2>
+                  <h5><ion-icon name="calendar"></ion-icon> Meeting Declined</h5>
+                  <p>Tue 29, 4:00pm - 4:30pm</p>
+                </div>
+              </div>
+              <div class="rightarrow">
+                <a>
+                12:14 pm
+              </a>
+              </div>
+            </a>
+            <a class="speakerlis" routerLink="/speakerview">
+              <div class="col-1-3">
+                <div class="imgwrapper">
+                  <img src="../../assets/images/speakerimg2.png">
+                </div>
+              </div>
+              <div class="col-1-7">
+                <div class="textwrapper">
+                  <h2>Aaron Goldsmid</h2>
+                  <h5><ion-icon name="calendar"></ion-icon> Meeting Declined</h5>
+                  <p>Tue 29, 4:00pm - 4:30pm</p>
+                </div>
+              </div>
+              <div class="rightarrow">
+                <a>
+                12:14 pm
+              </a>
+              </div>
+            </a>
+           
+  
+           
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</ion-content>
+<app-tabs></app-tabs>

@@ -31,6 +31,24 @@ import { from } from 'rxjs';
 import { CookieService } from 'ngx-cookie-service';
 import { TalenthuntComponent } from './talenthunt/talenthunt.component';
 import { TalenthuntuploadComponent } from './talenthuntupload/talenthuntupload.component';
+
+
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
+import { File } from '@ionic-native/File/ngx';
+import { MediaCapture } from '@ionic-native/media-capture/ngx';
+import { Media } from '@ionic-native/media/ngx';
+import { StreamingMedia } from '@ionic-native/streaming-media/ngx';
+import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
+import { ProductdetailComponent } from './productdetail/productdetail.component';
+import { MycartComponent } from './mycart/mycart.component';
+import { ProductsearchComponent } from './productsearch/productsearch.component';
+import { OrdersummaryComponent } from './ordersummary/ordersummary.component';
+import { NetworkingComponent } from './networking/networking.component';
+import { ChatComponent } from './chat/chat.component';
+import { NetworkingtabComponent } from './networkingtab/networkingtab.component';
+
+
+
 @NgModule({
   declarations: [    
     AppComponent,
@@ -52,7 +70,15 @@ import { TalenthuntuploadComponent } from './talenthuntupload/talenthuntupload.c
     ProductsComponent,
     SelectcategoryComponent,
     TalenthuntComponent,
-    TalenthuntuploadComponent
+    TalenthuntuploadComponent,
+    ProductdetailComponent,
+    MycartComponent,
+    ProductsearchComponent,
+    OrdersummaryComponent,
+    NetworkingComponent,
+    ChatComponent,
+    NetworkingtabComponent
+
   ],
   entryComponents: [],
   imports: [
@@ -64,6 +90,13 @@ import { TalenthuntuploadComponent } from './talenthuntupload/talenthuntupload.c
     HttpClientModule
   ],
   providers: [
+    ImagePicker,
+    MediaCapture,
+    File,
+    Media,
+    StreamingMedia,
+    PhotoViewer,
+
     StatusBar,
     CookieService,
     ApiService,

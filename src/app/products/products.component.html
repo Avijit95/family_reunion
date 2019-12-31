@@ -10,21 +10,11 @@
 
 
 <ion-content fullscreen>
-<div class="productmainwrapper">
-  <div class="producttopbar">
-    <div class="col">
-        <button class="selectcategorybtn" (click)="selectcategory()">Select category <ion-icon name="arrow-down"></ion-icon></button>
-    </div>
-    <div class="col">
-      <button class="searchbtn"><ion-icon name="search"></ion-icon></button>
-      <button class="cartbtn">
-        <span class="bach">12</span>
-        <ion-icon name="cart"></ion-icon>
-      </button>
-    </div>
-  </div>
+<div class="productmainwrapper productmainwrapper1">
+  <app-productsearch></app-productsearch>
+
   <div class="productcontainer">
-      <div class="col-1-2">
+      <a class="col-1-2" routerLink="/productdetail">
         <div class="imgwrapper">
           <img src="../../assets/images/product1.png">
         </div>
@@ -33,8 +23,8 @@
           <h2>Digitek DTR 550 LW Tripod  </h2>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         </div>
-      </div>
-      <div class="col-1-2">
+      </a>
+      <a class="col-1-2" routerLink="/productdetail">
         <div class="imgwrapper">
           <img src="../../assets/images/product2.png">
         </div>
@@ -42,9 +32,10 @@
           <h1>$ 65.00</h1>
           <h2>Digitek DTR 550 LW Tripod </h2>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        </div>
+        
       </div>
-      <div class="col-1-2">
+    </a>
+      <a class="col-1-2" routerLink="/productdetail">
         <div class="imgwrapper">
           <img src="../../assets/images/product3.png">
         </div>
@@ -53,8 +44,8 @@
           <h2>Digitek DTR 550 LW Tripod  </h2>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         </div>
-      </div>
-      <div class="col-1-2">
+      </a>
+      <a class="col-1-2" routerLink="/productdetail">
         <div class="imgwrapper">
           <img src="../../assets/images/product4.png">
         </div>
@@ -63,8 +54,8 @@
           <h2>Digitek DTR 550 LW Tripod  </h2>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         </div>
-      </div>
-      <div class="col-1-2">
+      </a>
+      <a class="col-1-2" routerLink="/productdetail">
         <div class="imgwrapper">
           <img src="../../assets/images/product5.png">
         </div>
@@ -73,8 +64,8 @@
           <h2>Digitek DTR 550 LW Tripod  </h2>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         </div>
-      </div>
-      <div class="col-1-2">
+      </a>
+      <a class="col-1-2" routerLink="/productdetail">
         <div class="imgwrapper">
           <img src="../../assets/images/product6.png">
         </div>
@@ -83,7 +74,7 @@
           <h2>Digitek DTR 550 LW Tripod  </h2>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         </div>
-      </div>
+      </a>
   </div>
 </div>
 </ion-content>

@@ -19,6 +19,13 @@ import { ProductsComponent } from './products/products.component';
 import { SelectcategoryComponent } from './selectcategory/selectcategory.component';
 import { TalenthuntComponent } from './talenthunt/talenthunt.component';
 import { TalenthuntuploadComponent } from './talenthuntupload/talenthuntupload.component';
+import { ProductdetailComponent } from './productdetail/productdetail.component';
+import { MycartComponent } from './mycart/mycart.component';
+import { ProductsearchComponent } from './productsearch/productsearch.component';
+import { OrdersummaryComponent } from './ordersummary/ordersummary.component';
+import { NetworkingComponent } from './networking/networking.component';
+import { ChatComponent } from './chat/chat.component';
+import { NetworkingtabComponent } from './networkingtab/networkingtab.component';
 
 const routes: Routes = [
   { path: 'home', redirectTo: 'home', pathMatch: 'full' },
@@ -42,6 +49,13 @@ const routes: Routes = [
   { path: 'selectcategory', component : SelectcategoryComponent},
   { path: 'talenthunt', component : TalenthuntComponent},
   { path: 'talenthuntupload', component : TalenthuntuploadComponent},
+  { path: 'productdetail', component : ProductdetailComponent},
+  { path: 'mycart', component : MycartComponent},
+  { path: 'Productsearch', component : ProductsearchComponent},
+  { path: 'ordersummary', component : OrdersummaryComponent},
+  { path: 'networking', component : NetworkingComponent},
+  { path: 'chat', component : ChatComponent},
+  { path: 'networkingtab', component : NetworkingtabComponent},
 ];
 
 @NgModule({
