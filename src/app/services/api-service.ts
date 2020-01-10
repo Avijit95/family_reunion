@@ -5,15 +5,12 @@ import { switchMap, map, takeWhile } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
-// import {UploaderComponent} from "./uploader/uploader.component";
-
 
 @Injectable()
 export class ApiService {
 
     public loginurl = environment['loginurl'];
-    public api_url="https://wj19qlt2h4.execute-api.us-east-1.amazonaws.com/dev/api/";
-    //public api_url = environment["api_url"];
+    public api_url: string = environment['apiUrl'];
     public url = environment["url"];
     public fileurl = environment["fileurl"];
     public videofileupload = environment["videofileupload"];
@@ -22,29 +19,10 @@ export class ApiService {
 
 
 
-    constructor(private _http: HttpClient,
-                private _authHttp: HttpClient,
-                public cookieService: CookieService
-                // public jwtHelper: JwtHelperService,
-                // private loggedinService: LoggedinService
-    ) {
+    constructor(private _http: HttpClient, private _authHttp: HttpClient, public cookieService: CookieService) {
         this.jwttoken=this.cookieService.get('jwttoken');
     }
 
-
-    isTokenExpired() {
-
-        // const helper = new JwtHelperService();
-        // const decodedToken = helper.decodeToken(localStorage.getItem('id_token'));
-        // var isIdTokenExpired = helper.isTokenExpired(localStorage.getItem('id_token'));
-        // console.log('refresh_token',localStorage.getItem('refresh_token'))
-        // const isRefreshTokenExpired = helper.isTokenExpired(localStorage.getItem('refresh_token'));
-        // console.log('id_token isExpired:',isIdTokenExpired)
-        // console.log('refresh_token isExpired:',isRefreshTokenExpired)
-
-
-
-    }
     postUploadFunction(upload_data:any,path:any){
         console.log('upload_data');
         console.log(upload_data);
@@ -53,12 +31,7 @@ export class ApiService {
     }
 
     getclientip() {
-
-        console.log('endpoint');
-
-        // this.isTokenExpired()
         var result = this._http.get("https://ipinfo.io/?format=json&token=9797c42b93078a").pipe(map(res => res));
-
         return result;
     }
 
@@ -68,9 +41,6 @@ export class ApiService {
                 'Content-Type':  'application/json'
             })
         };
-        /* console.log('httpOptions');
-         console.log(httpOptions);*/
-        // this.isTokenExpired()
         var result = this._http.get(this.api_url + endpoint, httpOptions).pipe(map(res => res));
         return result;
     }

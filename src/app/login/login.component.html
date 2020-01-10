@@ -19,19 +19,19 @@
         </div>
         <div class="textwrapper loginform">
           <form [formGroup]="loginForm"> 
-            <p class="errormsg" *ngIf="errorMsg != ''">{{errorMsg}}</p>
+            <p class="errormsg" *ngIf="errorMsg != ''">{{ htmlData.errorMsg }}</p>
             <div class="form-group">
-              <ion-input ion-input placeholder="Username" type="text" formControlName="username" (blur)="inputUntouch('username')"></ion-input>
-              <p *ngIf="loginForm.controls['username'].touched && !loginForm.controls['username'].invalid && errorMsg == ''" class="errortext validinput"><ion-icon name="checkmark"></ion-icon></p>
-              <p *ngIf="(loginForm.controls['username'].touched && !loginForm.controls['username'].valid) || errorMsg != ''" class="errortext invalidinput"><ion-icon name="close"></ion-icon></p>
+              <ion-input ion-input placeholder="Email" type="text" formControlName="email" (blur)="inputUntouch('email')"></ion-input>
+              <p *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].valid" class="errortext validinput"><ion-icon name="checkmark"></ion-icon></p>
+              <p *ngIf="loginForm.controls['email'].touched && !loginForm.controls['email'].valid" class="errortext invalidinput"><ion-icon name="close"></ion-icon></p>
             </div>
             <div class="form-group">
               <ion-input ion-input placeholder="Password" type="password" formControlName="password" (blur)="inputUntouch('password')"></ion-input>
-              <p *ngIf="loginForm.controls['password'].touched && !loginForm.controls['password'].invalid && errorMsg == ''" class="errortext validinput"><ion-icon name="checkmark"></ion-icon></p>
-              <p *ngIf="(loginForm.controls['password'].touched && !loginForm.controls['password'].valid) || errorMsg != ''" class="errortext invalidinput"><ion-icon name="close"></ion-icon></p>
+              <p *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].valid" class="errortext validinput"><ion-icon name="checkmark"></ion-icon></p>
+              <p *ngIf="loginForm.controls['password'].touched && !loginForm.controls['password'].valid" class="errortext invalidinput"><ion-icon name="close"></ion-icon></p>
             </div>
             <br>
-            <button class="welcomebluebutton" (click)="login()">login</button>
+            <button class="welcomebluebutton" (click)="login()">Login</button>
           <p><span><a routerLink="/otp">forgot password?</a></span></p>
           </form>
           
