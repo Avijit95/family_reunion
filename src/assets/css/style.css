@@ -110,17 +110,51 @@ button:focus{outline: none;}
     padding: 13px 0;
     font-family: 'RobotoBold';
 }
+
+.blackbtn{
+    background: rgba(31,36,44,1);
+    background: -moz-linear-gradient(top, rgba(31,36,44,1) 0%, rgba(31,36,44,1) 50%, rgba(5,9,16,1) 51%, rgba(5,9,16,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(31,36,44,1)), color-stop(50%, rgba(31,36,44,1)), color-stop(51%, rgba(5,9,16,1)), color-stop(100%, rgba(5,9,16,1)));
+    background: -webkit-linear-gradient(top, rgba(31,36,44,1) 0%, rgba(31,36,44,1) 50%, rgba(5,9,16,1) 51%, rgba(5,9,16,1) 100%);
+    background: -o-linear-gradient(top, rgba(31,36,44,1) 0%, rgba(31,36,44,1) 50%, rgba(5,9,16,1) 51%, rgba(5,9,16,1) 100%);
+    background: -ms-linear-gradient(top, rgba(31,36,44,1) 0%, rgba(31,36,44,1) 50%, rgba(5,9,16,1) 51%, rgba(5,9,16,1) 100%);
+    background: linear-gradient(to bottom, rgba(31,36,44,1) 0%, rgba(31,36,44,1) 50%, rgba(5,9,16,1) 51%, rgba(5,9,16,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f242c', endColorstr='#050910', GradientType=0 );
+    color: #fff;
+    font-family: 'RobotoRegular'; 
+    font-size: 18px;
+    border-radius: 5px; 
+    padding: 10px;   
+}
+.yellowbtn{
+    background: rgba(255,234,8,1);
+    background: -moz-linear-gradient(top, rgba(255,234,8,1) 0%, rgba(255,234,8,1) 50%, rgba(255,222,38,1) 51%, rgba(255,222,38,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,234,8,1)), color-stop(50%, rgba(255,234,8,1)), color-stop(51%, rgba(255,222,38,1)), color-stop(100%, rgba(255,222,38,1)));
+    background: -webkit-linear-gradient(top, rgba(255,234,8,1) 0%, rgba(255,234,8,1) 50%, rgba(255,222,38,1) 51%, rgba(255,222,38,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,234,8,1) 0%, rgba(255,234,8,1) 50%, rgba(255,222,38,1) 51%, rgba(255,222,38,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,234,8,1) 0%, rgba(255,234,8,1) 50%, rgba(255,222,38,1) 51%, rgba(255,222,38,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,234,8,1) 0%, rgba(255,234,8,1) 50%, rgba(255,222,38,1) 51%, rgba(255,222,38,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffea08', endColorstr='#ffde26', GradientType=0 );
+    color: #000;
+    font-family: 'RobotoMedium'; 
+    font-size: 18px;
+    border-radius: 5px; 
+    padding: 10px; 
+}
+
+.welcomemainwrapper .blackbtn, .welcomemainwrapper .yellowbtn {text-transform: uppercase; display: block; width: 100%; text-align: center;padding: 15px 10px;font-size: 19px; margin-bottom: 10px;}
+
 .welcomebluebutton:focus {
     outline: none;
 }
 .textwrapper h2{
     font-family: 'RobotoRegular';
     color: #fff;
-    font-size: 27px;
+    font-size: 22px;
     margin: 0;
 }
 .logoimgwrapper{
-    width: 200px;
+    width: 260px;
     margin: 0 auto;
 }
 .textwrapper p, .textwrapper p span, .textwrapper p span a{

@@ -19,7 +19,7 @@
         </div>
         <div class="textwrapper loginform">
           <form [formGroup]="loginForm"> 
-            <p class="errormsg" *ngIf="errorMsg != ''">{{ htmlData.errorMsg }}</p>
+            <p class="errormsg" *ngIf="htmlData.errorMsg != ''">{{ htmlData.errorMsg }}</p>
             <div class="form-group">
               <ion-input ion-input placeholder="Email" type="text" formControlName="email" (blur)="inputUntouch('email')"></ion-input>
               <p *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].valid" class="errortext validinput"><ion-icon name="checkmark"></ion-icon></p>
@@ -31,8 +31,9 @@
               <p *ngIf="loginForm.controls['password'].touched && !loginForm.controls['password'].valid" class="errortext invalidinput"><ion-icon name="close"></ion-icon></p>
             </div>
             <br>
-            <button class="welcomebluebutton" (click)="login()">Login</button>
-          <p><span><a routerLink="/otp">forgot password?</a></span></p>
+            <button class="yellowbtn" (click)="login()">Login</button>
+            <button class="blackbtn"  routerLink="/otp">forgot password?</button>
+          <!-- <p><span><a routerLink="/otp">forgot password?</a></span></p> --> 
           </form>
           
         </div>

@@ -46,6 +46,7 @@ import { OrdersummaryComponent } from './ordersummary/ordersummary.component';
 import { NetworkingComponent } from './networking/networking.component';
 import { ChatComponent } from './chat/chat.component';
 import { NetworkingtabComponent } from './networkingtab/networkingtab.component';
+import { IonicStorageModule } from '@ionic/storage';
 
 
 
@@ -84,6 +85,7 @@ import { NetworkingtabComponent } from './networkingtab/networkingtab.component'
   imports: [
     BrowserModule, 
     IonicModule.forRoot(), 
+    IonicStorageModule.forRoot(),
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

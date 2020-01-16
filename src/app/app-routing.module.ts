@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
+
+
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { SignupComponent } from './signup/signup.component';
@@ -35,8 +38,8 @@ const routes: Routes = [
   { path: 'signup', component : SignupComponent},
   { path: 'forgotpassword', component : ForgotpasswordComponent},
   { path: 'otp', component : OtpComponent},
-  { path: 'homepage', component : HomepageComponent},
-  { path: 'tabs', component : TabsComponent},
+  { path: 'homepage', component : HomepageComponent, canActivate: [AuthGuard]},
+  { path: 'tabs', component : TabsComponent, canActivate: [AuthGuard]},
   { path: 'agenda', component : AgendaComponent},
   { path: 'agendaview', component : AgendaviewComponent},
   { path: 'speaker', component : SpeakerComponent},
