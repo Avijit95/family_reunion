@@ -47,6 +47,7 @@ import { NetworkingComponent } from './networking/networking.component';
 import { ChatComponent } from './chat/chat.component';
 import { NetworkingtabComponent } from './networkingtab/networkingtab.component';
 import { IonicStorageModule } from '@ionic/storage';
+import { LogoutComponent } from './logout/logout.component';
 
 
 
@@ -78,7 +79,8 @@ import { IonicStorageModule } from '@ionic/storage';
     OrdersummaryComponent,
     NetworkingComponent,
     ChatComponent,
-    NetworkingtabComponent
+    NetworkingtabComponent,
+    LogoutComponent
 
   ],
   entryComponents: [],

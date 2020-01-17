@@ -19,6 +19,14 @@ export class LoginComponent implements OnInit {
   };
 
   constructor(public FormBuilder: FormBuilder, public Router: Router, public apiService: ApiService, public loadingController: LoadingController, private storage: Storage) {
+    // this.storage.get('token').then((value) => {
+    //   setTimeout(() => {
+    //     if(value != null) {
+    //       this.Router.navigateByUrl('/homepage');
+    //     }
+    //   }, 1000);
+    // });
+    
     this.loginForm = this.FormBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(16)]]
@@ -47,8 +55,7 @@ export class LoginComponent implements OnInit {
           console.log("okk>>", response);
 
           /* Store into the stroage */
-          this.storage.set('jwtToken', response.token);
-
+          this.storage.set('token', response.token);
           this.Router.navigateByUrl('/homepage');
         } else {
           this.htmlData.errorMsg = "Invalid Email or Password.";

@@ -575,6 +575,10 @@ ion-toolbar.in-toolbar ion-buttons{width: 100%;}
 }
 
 .Sponsorviewmainwrapper.myprofilewrapper .sponsorcontainer{padding: 5px 0; padding-bottom: 82px;}
+.Sponsorviewmainwrapper.myprofilewrapper .sponsorcontainer .yellowbtn, .Sponsorviewmainwrapper.myprofilewrapper .sponsorcontainer .blackbtn{
+    width: 100%; display: flex; justify-content: center; align-items: center; font-size: 22px;    margin: 10px 0;box-shadow: 0 2px 7px #b1afaf;
+}
+.Sponsorviewmainwrapper.myprofilewrapper .sponsorcontainer .yellowbtn ion-icon{margin-right: 5px;}
 .backgrounda ion-icon{margin-right: 5px;}
 .backgrounda{
     background-color: #fff;
@@ -585,6 +589,7 @@ ion-toolbar.in-toolbar ion-buttons{width: 100%;}
     align-items: center;
     border-radius: 5px;color: #0058bc;
 }
+.Sponsorviewmainwrapper.myprofilewrapper .sponsorcontainer .backgroundtitle{margin-bottom: 10px;}
 .Sponsorviewmainwrapper.myprofilewrapper{background-color: #eef4f7;}
 .green-md-btn{background-color: #18d18d; min-width: 122px; color: #033724; font-size: 14px; font-family: 'RobotoMedium'; display: inline-block; margin: 2px; 
     padding: 5px;border-radius: 5px; box-shadow: 0 1px 2px #b1aeae;}

@@ -29,6 +29,7 @@ import { OrdersummaryComponent } from './ordersummary/ordersummary.component';
 import { NetworkingComponent } from './networking/networking.component';
 import { ChatComponent } from './chat/chat.component';
 import { NetworkingtabComponent } from './networkingtab/networkingtab.component';
+import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes = [
   { path: 'home', redirectTo: 'home', pathMatch: 'full' },
@@ -59,6 +60,7 @@ const routes: Routes = [
   { path: 'networking', component : NetworkingComponent},
   { path: 'chat', component : ChatComponent},
   { path: 'networkingtab', component : NetworkingtabComponent},
+  { path: 'logout', component : LogoutComponent}
 ];
 
 @NgModule({

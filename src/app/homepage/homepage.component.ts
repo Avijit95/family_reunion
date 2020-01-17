@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-homepage',
@@ -8,7 +9,14 @@ import { Router } from '@angular/router';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor(public router: Router) {
+  constructor(private storage: Storage, public router: Router) {
+    this.storage.get('token').then((value) => {
+      setTimeout(() => {
+        if(value == null) {
+          this.router.navigateByUrl('/login');
+        }
+      }, 1000);
+    });
   }
 
   ngOnInit() {}
