@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
+
+
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { SignupComponent } from './signup/signup.component';
@@ -26,6 +29,7 @@ import { OrdersummaryComponent } from './ordersummary/ordersummary.component';
 import { NetworkingComponent } from './networking/networking.component';
 import { ChatComponent } from './chat/chat.component';
 import { NetworkingtabComponent } from './networkingtab/networkingtab.component';
+import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes = [
   { path: 'home', redirectTo: 'home', pathMatch: 'full' },
@@ -35,8 +39,8 @@ const routes: Routes = [
   { path: 'signup', component : SignupComponent},
   { path: 'forgotpassword', component : ForgotpasswordComponent},
   { path: 'otp', component : OtpComponent},
-  { path: 'homepage', component : HomepageComponent},
-  { path: 'tabs', component : TabsComponent},
+  { path: 'homepage', component : HomepageComponent, canActivate: [AuthGuard]},
+  { path: 'tabs', component : TabsComponent, canActivate: [AuthGuard]},
   { path: 'agenda', component : AgendaComponent},
   { path: 'agendaview', component : AgendaviewComponent},
   { path: 'speaker', component : SpeakerComponent},
@@ -56,6 +60,7 @@ const routes: Routes = [
   { path: 'networking', component : NetworkingComponent},
   { path: 'chat', component : ChatComponent},
   { path: 'networkingtab', component : NetworkingtabComponent},
+  { path: 'logout', component : LogoutComponent}
 ];
 
 @NgModule({

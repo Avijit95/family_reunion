@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import {ApiService} from '../services/api-service';
+import { LoadingController } from '@ionic/angular';
+import { ApiService } from '../services/api-service';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-login',
@@ -10,13 +12,21 @@ import {ApiService} from '../services/api-service';
 })
 
 export class LoginComponent implements OnInit {
-  
+
   public loginForm: FormGroup;
   public htmlData: any = {
     errorMsg: ""
   };
 
-  constructor(public FormBuilder: FormBuilder, public Router: Router,public apiService:ApiService) {
+  constructor(public FormBuilder: FormBuilder, public Router: Router, public apiService: ApiService, public loadingController: LoadingController, private storage: Storage) {
+    // this.storage.get('token').then((value) => {
+    //   setTimeout(() => {
+    //     if(value != null) {
+    //       this.Router.navigateByUrl('/homepage');
+    //     }
+    //   }, 1000);
+    // });
+    
     this.loginForm = this.FormBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(16)]]
@@ -25,28 +35,37 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() { }
 
-  login() {
+  async login() {
     for (let i in this.loginForm.controls) {
       this.loginForm.controls[i].markAsTouched();
     }
 
-    if(this.loginForm.valid) {
-      let postData = {
-        "email" :this.loginForm.value.email,
-	      "password" :this.loginForm.value.password
-      }
-      this.apiService.postData('login', postData).subscribe(( response: any ) => {
-        if(response.status == true) {
-          this.Router.navigateByUrl ('/homepage');
+
+    if (this.loginForm.valid) {
+      const loading = await this.loadingController.create({
+        message: 'Loading....',
+        duration: 2000
+      });
+
+      await loading.present();
+      const { role, data } = await loading.onDidDismiss();
+
+      this.apiService.postData('login', this.loginForm.value).subscribe((response: any) => {
+        if (response.status == "success") {
+          console.log("okk>>", response);
+
+          /* Store into the stroage */
+          this.storage.set('token', response.token);
+          this.Router.navigateByUrl('/homepage');
         } else {
           this.htmlData.errorMsg = "Invalid Email or Password.";
         }
-      })
+      });
     }
   }
-  
+
   inputUntouch(val: any) {
     this.loginForm.controls[val].markAsUntouched();
-    
+
   }
 }
