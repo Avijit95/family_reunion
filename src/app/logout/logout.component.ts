@@ -23,7 +23,7 @@ export class LogoutComponent implements OnInit {
     setTimeout(() => {
       this.router.navigateByUrl('/welcomepage');
       window.location.href='/';
-    }, 1500); 
+    }, ); 
   }
 
 }
